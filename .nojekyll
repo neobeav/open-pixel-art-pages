@@ -1,0 +1,1 @@
+# Serve every path as-is; no Jekyll build. Keeps runs/ directories literal.
