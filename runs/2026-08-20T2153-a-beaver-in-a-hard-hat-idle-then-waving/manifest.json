@@ -1,0 +1,101 @@
+{
+  "schema": 1,
+  "id": "2026-08-20T2153-a-beaver-in-a-hard-hat-idle-then-waving",
+  "created": "2026-08-20T21:53:22.061Z",
+  "subject": "a beaver in a hard hat, idle then waving",
+  "mode": "script",
+  "model": "procedural/v1",
+  "sprite": {
+    "width": 32,
+    "height": 32,
+    "frames": 8,
+    "palette": [
+      "#141820",
+      "#8f5331",
+      "#be7542",
+      "#663726",
+      "#f4d35e",
+      "#ffe274",
+      "#ebebd2",
+      "#2c1f1b"
+    ]
+  },
+  "animation": {
+    "fps": 12,
+    "loop": true
+  },
+  "sheet": "sheet.png",
+  "frames": [
+    "frames/000.png",
+    "frames/001.png",
+    "frames/002.png",
+    "frames/003.png",
+    "frames/004.png",
+    "frames/005.png",
+    "frames/006.png",
+    "frames/007.png"
+  ],
+  "attempts": 1,
+  "validation": {
+    "passed": true,
+    "notes": []
+  },
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cost_usd": 0,
+    "wall_seconds": 0.043
+  },
+  "notes": "Visual review: PASS. Tail jitter is resolved; the layered arm rises and returns clearly, and the hand reads as intentional. Minor caveat: the 32px hand is still a small blocky mitten.",
+  "orchestration": {
+    "planner": {
+      "model": "procedural/planner-v1",
+      "plan": {
+        "silhouette": "a centered, high-contrast silhouette with a distinct head, body, and outer contour",
+        "palette": [
+          "dark outline",
+          "main subject color",
+          "secondary shadow",
+          "motion accent"
+        ],
+        "requiredDetails": [
+          "beaver",
+          "hard",
+          "hat",
+          "idle",
+          "waving"
+        ],
+        "motionBeats": [
+          "rest",
+          "arm rises",
+          "wave peak",
+          "arm returns"
+        ]
+      }
+    },
+    "candidates": [
+      {
+        "id": "candidate-1",
+        "valid": true,
+        "validation_errors": [],
+        "critique": {
+          "score": 100,
+          "readable": true,
+          "motionReadable": true,
+          "feedback": []
+        },
+        "repaired": false
+      }
+    ],
+    "selected_candidate": "candidate-1",
+    "models": {
+      "planner": "procedural/planner-v1",
+      "generator": "procedural/v1"
+    },
+    "feedback": [
+      "Planning silhouette: a centered, high-contrast silhouette with a distinct head, body, and outer contour",
+      "Planning details: beaver, hard, hat, idle, waving",
+      "Planning motion: rest, arm rises, wave peak, arm returns"
+    ]
+  }
+}
